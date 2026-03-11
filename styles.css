@@ -1,5 +1,6 @@
 /* ***************************************************************************************** */
 /* Objective - Dev Tool demo from classmate -> Coolors palette using lock feature: */
+/* ***************************************************************************************** */
 :root {
   --icy-blue: #add7f6ff;
   --dusty-taupe: #a18276ff;
@@ -8,7 +9,10 @@
   --tan: #dab785ff;
 }
 
+
+/* ***************************************************************************************** */
 /* Objective - My Dev Tool Demo font pairing CSS Code */
+/* ***************************************************************************************** */
 .dm-serif-display-regular {
   font-family: "DM Serif Display", serif;
   font-weight: 500;
@@ -33,22 +37,7 @@
 /* ***************** Including On Load Animations ************************************ */
 /* ************************************************************************************************************************** */
 
-/* .slide-in-bck-center {
-	animation: slide-in-bck-center 3.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-@keyframes slide-in-bck-center {
-  0% {
-    transform: translateZ(600px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateZ(0);
-    opacity: 1;
-  }
-} */
-
-/* For the Cards */
+/* Animation for the Cards */
 .flip-in-hor-bottom {
 	animation: flip-in-hor-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
@@ -64,7 +53,7 @@
   }
 }
 
-/* For the H1 Tag */
+/* Animation for the H1 Tag */
 .bounce-in-top {
 	animation: bounce-in-top 1.1s both;
 }
@@ -108,7 +97,7 @@
 
 
 /* ************************************************************************************************************************* */
-/* ************************************************ Main Setup ************************************************ */
+/* ************************************************ Main/Default Setup ************************************************ */
 /* ************************************************************************************************************************* */
 /* Grid Set up */
 body {
@@ -129,11 +118,21 @@ body {
     box-sizing: border-box;
 }
 
+/* ************************************************************************************************************************* */
+/* ************************************************ Headers ************************************************ */
+/* ************************************************************************************************************************* */
+
 h1 {
   font-size: 30px;
   color: white;
   font-family: "DM Serif Display", serif;
-  text-align: center;
+  animation: bounce-in-top 2s;
+}
+
+h1-main {
+  font-size: 30px;
+  color: black;
+  font-family: "DM Serif Display", serif;
   animation: bounce-in-top 2s;
 }
 
@@ -148,46 +147,11 @@ h2 {
   width: 300px;
 }
 
-/* ***************************************************** */
-/* Adding Neumorphism */
-/* ***************************************************** */
-button {
+h3 {
+  margin: 0 auto;
   font-family: "DM Serif Display", serif;
-  font-size: 25px;
-
-  color: #090909;
-  font-size: 18px;
-  border-radius: 0.5em;
-  background: #e8e8e8;
-  cursor: pointer;
-  border: 1px solid #e8e8e8;
-  transition: all 0.3s;
-  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
-
+  font-size: 30px;
   padding: 10px;
-  margin-bottom: 15px;
-  margin-top: 20px;
-}
-
-button:active {
-  color: #666;
-  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
-}
-
-
-.header-container {
-  align-items: center;
-  margin: 0 auto;
-
-}
-
-.main-container {
-  align-items: center;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-
 }
 
 p {
@@ -198,6 +162,16 @@ p {
   padding-top: 0px;
 }
 
+li {
+  font-family: "Roboto Mono", monospace;
+  font-size: 20px;
+  padding: 10px;
+}
+
+
+/* ************************************************************************************************************************* */
+/* ************************************************ Page Format ************************************************ */
+/* ************************************************************************************************************************* */
 header {
   background-color: var(--granite);
   grid-area: header;
@@ -212,19 +186,6 @@ aside {
   display: none;
 }
 
-li {
-  font-family: "Roboto Mono", monospace;
-  font-size: 20px;
-  padding: 10px;
-}
-
-h3 {
-  margin: 0 auto;
-  font-family: "DM Serif Display", serif;
-  font-size: 30px;
-  padding: 10px;
-}
-
 main {
   background-color: var(--icy-blue);
   grid-area: main;
@@ -237,6 +198,69 @@ footer {
   padding: 10px;
 }
 
+
+/* ************************************************************************************************************************** */
+/* ***************************************** Objective - Adding Neumorphism to the Button *********************************** */
+/* ************************************************************************************************************************** */
+button {
+  font-family: "DM Serif Display", serif;
+  font-size: 25px;
+  
+  color: #090909;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  cursor: pointer;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+  
+  padding: 10px;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+button:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+
+/* ************************************************************************************************************************** */
+/*  ************************************* Containers ********************************************** */
+/* ************************************************************************************************************************** */
+.header-container {
+  align-items: center;
+  margin: 0 auto;
+  
+}
+
+.main-container {
+  align-items: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  
+}
+
+.history-container {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.img-history-container {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+/* ************************************************************************************************************************** */
+/* ************************************************ Cards ********************************************************** */
+/* ************************************************************************************************************************** */
 
 .main-card {
   background-color: rgb(251, 252, 251);
@@ -258,9 +282,27 @@ footer {
 }
 
 
+
+.img-history, .history-video {
+  width: 20rem;
+}
+
+.img-history {
+  border-radius: 60px; 
+  padding: 20px;
+  max-height: 1000px;
+}
+
+.history-video {
+  padding: 20px;
+  max-height: 1000px;
+}
+
+
 /* ******************************************************************************************************************************* */
 /* *************** Bootstrap Media Breakpoints ****************************** */
 /* ******************************************************************************************************************************* */
+
 /* Small Screen */
 @media screen and (min-width: 576px) {
   body {
@@ -293,8 +335,16 @@ footer {
     font-size: 45px;
   }
 
+  h1-main {
+    font-size: 35px;
+  }
+
   p {
     font-size: 20px;
+  }
+
+  .img-history, .history-video {
+    width: 25rem;
   }
 
 
@@ -324,17 +374,25 @@ footer {
     width: 380px;
   }
 
+  h1 {
+    font-size: 55px;
+  }
+
+  h1-main {
+    font-size: 45px;
+  }
+
   h2 {
     width: 360px;
     font-size: 35px;
   }
 
-  h1 {
-    font-size: 55px;
-  }
-
   p {
     font-size: 22px;
+  }
+
+  .img-history, .history-video {
+    width: 30rem;
   }
 }
 
@@ -358,14 +416,19 @@ footer {
     width: 400px;
   }
 
+  h1 {
+    font-size: 55px;
+  }
+
+  h1-main {
+    font-size: 50px;
+  }
+
   h2 {
     width: 380px;
     font-size: 35px;
   }
 
-  h1 {
-    font-size: 55px;
-  }
 
   p {
     font-size: 22px;
@@ -401,6 +464,10 @@ footer {
     grid-area: sidebar;
     align-items: center;
   }
+
+  .img-history, .history-video {
+    width: 40rem;
+  }
 }
 
 /* Extra Extra Large Screen */
@@ -414,10 +481,18 @@ footer {
     grid-area: sidebar;
     align-items: center;
   }
+
+  .img-history, .history-video {
+    width: 45rem;
+  }
+
+  li {
+    font-size: 1.4rem;
+  }
 }
 
 /* Largest Screen */
-@media screen and (min-width: 4400px) {
+@media screen and (min-width: 2400px) {
   .main-container {
     flex-direction: row;
   }
@@ -426,5 +501,13 @@ footer {
     background-color: var(--blue-energy);
     grid-area: sidebar;
     align-items: center;
+  }
+
+  .img-history, .history-video {
+    width: 60rem;
+  }
+
+  li {
+    font-size: 1.5rem;
   }
 }

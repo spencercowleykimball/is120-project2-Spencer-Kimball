@@ -17,6 +17,5 @@ A.
 A. 
 
 To Do:
-- Include your own on load or background animation
 
 Publish using GitHub pages and include the live URL in your repo about section. Submit the GitHub repo URL in LearningSuite.
