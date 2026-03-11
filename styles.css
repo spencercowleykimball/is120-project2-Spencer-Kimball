@@ -35,12 +35,12 @@
 /* ************************************************************************************************************************* */
 /* Grid Set up */
 body {
-  margin: 0;
+  margin: 0px;
   min-height: 100vh;
   display: grid;
   
   /* Use `grid-template` to control the sizing of these areas. */
-  grid-template: auto 1fr auto / minmax(275px, 400px) 1fr;
+  grid-template: auto 1fr auto / minmax(75px, 400px) 1fr;
 
   /* Use `grid-template-areas` to define four named areas: `header`, `main`, `sidebar`, `footer`. */
   grid-template-areas:
@@ -69,6 +69,31 @@ h2 {
   width: 300px;
 }
 
+/* ***************************************************** */
+/* Adding Neumorphism */
+/* ***************************************************** */
+button {
+  font-family: "DM Serif Display", serif;
+  font-size: 25px;
+
+  color: #090909;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  cursor: pointer;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+
+  padding: 10px;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+button:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
 
 
 .header-container {
@@ -82,16 +107,12 @@ h2 {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 
-}
-
-img {
-  margin-top: 10px;
 }
 
 p {
   font-family: "Roboto Mono", monospace;
-  /* padding: 20px; */
   margin-left: 10px;
   margin-bottom: 10px;
   margin-right: 10px;
@@ -108,6 +129,18 @@ header {
 aside {
   background-color: var(--blue-energy);
   grid-area: sidebar;
+  align-items: center;
+}
+
+li {
+  font-family: "Roboto Mono", monospace;
+  font-size: 20px;
+}
+
+h3 {
+  margin: 0 auto;
+  font-family: "DM Serif Display", serif;
+  font-size: 30px;
 }
 
 main {
@@ -133,10 +166,12 @@ footer {
   height: auto;
   margin-top: 10px;
   margin-bottom: 10px;
+  align-items: center;
+  
 }
 
 .main-card img {
-  width: 100%;
+  width: 90%;
   height: auto;
   object-fit: cover;
 }
@@ -153,7 +188,7 @@ footer {
     display: grid;
     
     /* Use `grid-template` to control the sizing of these areas. */
-    grid-template: auto 1fr auto / minmax(275px, 400px) 1fr;
+    grid-template: auto 1fr auto / minmax(275px, 360px) 1fr;
 
     /* Use `grid-template-areas` to define four named areas: `header`, `main`, `sidebar`, `footer`. */
     grid-template-areas:
@@ -163,17 +198,69 @@ footer {
       gap: 0;
       box-sizing: border-box;
   }
+
+  .main-card {
+    width: 340px;
+  }
+
+  h2 {
+    width: 320px;
+    font-size: 30px;
+  }
+
+  h1 {
+    font-size: 45px;
+  }
+
+  p {
+    font-size: 20px;
+  }
 }
 
 /* Medium Screen */
 @media screen and (min-width: 768px) {
   body {
-    margin: 0;
+    /* margin: 0; */
     min-height: 100vh;
+    /* min-width: 100vw; */
     display: grid;
     
     /* Use `grid-template` to control the sizing of these areas. */
-    grid-template: auto 1fr auto / minmax(275px, 400px) 1fr;
+    /* grid-template: auto 1fr auto / minmax(275px, 340px) 1fr; */
+
+    /* Use `grid-template-areas` to define four named areas: `header`, `main`, `sidebar`, `footer`. */
+    grid-template-areas:
+      "header header"
+      "main main"
+      "footer footer";
+      gap: 0;
+      box-sizing: border-box;
+  }
+
+  .main-card {
+    width: 380px;
+  }
+
+  h2 {
+    width: 360px;
+    font-size: 35px;
+  }
+
+  h1 {
+    font-size: 55px;
+  }
+
+  p {
+    font-size: 22px;
+  }
+}
+
+/* Large Screen */
+@media screen and (min-width: 992px) {
+    body {
+    margin: 0 auto;
+    min-height: 100vh;
+    display: grid;
 
     /* Use `grid-template-areas` to define four named areas: `header`, `main`, `sidebar`, `footer`. */
     grid-template-areas:
@@ -183,19 +270,52 @@ footer {
       gap: 0;
       box-sizing: border-box;
   }
+
+  .main-card {
+    width: 400px;
+  }
+
+  h2 {
+    width: 380px;
+    font-size: 35px;
+  }
+
+  h1 {
+    font-size: 55px;
+  }
+
+  p {
+    font-size: 22px;
+  }
 }
 
-/* Large Screen */
-@media screen and (min-width: 992px) {
 
-}
 
 /* Extra Large Screen */
-@media screen and (min-width: 1200px) {
-  
+@media screen and (min-width: 1200px) {  
+  .main-container {
+    /* align-items: center; */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .main-card {
+    /* padding: 20px; */
+    margin: 20px;
+  }
 }
 
 /* Extra Extra Large Screen */
 @media screen and (min-width: 1400px) {
-  
+  .main-container {
+    flex-direction: row;
+  }
+}
+
+/* Largest Screen */
+@media screen and (min-width: 4400px) {
+  .main-container {
+    flex-direction: row;
+  }
 }
