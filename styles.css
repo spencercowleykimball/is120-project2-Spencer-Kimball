@@ -34,7 +34,7 @@
 }
 
 /* ************************************************************************************************************************** */
-/* ***************** Including On Load Animations ************************************ */
+/* ***************** Objective - Including On Load Animations ************************************ */
 /* ************************************************************************************************************************** */
 
 /* Animation for the Cards */
@@ -95,6 +95,52 @@
   }
 }
 
+/* Animation for the Nav Buttons on the Bottom */
+.slide-in-left {
+	animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-right {
+	animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Animation for the Main SCon Icon */
+.swirl-in-fwd {
+	animation: swirl-in-fwd 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@keyframes swirl-in-fwd {
+  0% {
+    transform: rotate(-540deg) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+}
 
 /* ************************************************************************************************************************* */
 /* ************************************************ Main/Default Setup ************************************************ */
@@ -175,6 +221,7 @@ li {
   font-family: "Roboto Mono", monospace;
   font-size: 20px;
   padding: 10px;
+  color: black;
 }
 
 
@@ -222,7 +269,7 @@ button {
   cursor: pointer;
   border: 1px solid #e8e8e8;
   transition: all 0.3s;
-  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+  box-shadow: 1px 1px 2px #c5c5c5, -1px -1px 2px #ffffff;
   
   padding: 10px;
   margin-bottom: 15px;
@@ -234,19 +281,69 @@ button:active {
   box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
 }
 
+button:hover {
+  transform: scale(1.1);
+}
+
 .floating-btn {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  padding: 12 px 18px;
-  font-size: 20px;
-  border: var(--tan);
+  font-size: 25px;
+  /* border: var(--tan); */
   border-radius: 8px;
-  background-color: var(--dusty-taupe);
-  color: white;
+  background-color: white;
+  /* background-color: var(--dusty-taupe); */
+  color: black;
   cursor: pointer;
 
   z-index: 1000;
+}
+
+#top-btn {
+  animation: slide-in-left 2.5s;
+}
+
+.floating-btn:hover {
+  transform: scale(1.2);
+}
+
+#home-icon-animation {
+  animation: swirl-in-fwd 2.5s;
+}
+
+/* *************************************************** */
+/* Floating Links to Each SpencerCon Event*/
+/* *************************************************** */
+#sc1-btn {
+  left: 10px;
+  width: fit-content;
+  animation: slide-in-left 1s;
+  /* border: solid black 2px; */
+}
+
+#sc3-btn {
+  left: 50px;
+  width: fit-content;
+  animation: slide-in-left 1.2s;
+}
+
+#sc5-btn {
+  left: 90px;
+  width: fit-content;
+  animation: slide-in-left 1.4s;
+}
+
+#sc7-btn {
+  left: 130px;
+  width: fit-content;
+  animation: slide-in-left 1.6s;
+}
+
+#sc9-btn {
+  left: 170px;
+  width: fit-content;
+  animation: slide-in-left 1.8s;
 }
 
 a {
@@ -265,18 +362,36 @@ a {
   margin: 0 auto;
 }
 
-
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  position: relative;
+  flex-direction: column;
+}
 
 .home-icon {
   position: absolute;
-  left: 20px;
+  left: 15px;
+  top: 20px;
 }
 
 .home-icon img {
-  height: 4rem;
+  height: 2rem;
   width: auto;
   display: inline-block;
 }
+
+.home-icon:hover {
+  transform: scale(1.2);
+}
+
+.nav-links:hover {
+  transform: scale(1.2);
+  font-family: "DM Serif Display", serif;
+}
+
 
 /* Containers for the main element */
 .main-container {
@@ -325,7 +440,6 @@ a {
   height: auto;
   object-fit: cover;
 }
-
 
 
 .img-history, .history-video {
@@ -486,6 +600,16 @@ a {
     display:block;
 
   }
+
+  .home-icon img {
+    height: 3.7rem;
+  }
+
+  .home-icon {
+    position: absolute;
+    left: 15px;
+    top: 25px;
+  }
 }
 
 
@@ -512,6 +636,16 @@ a {
 
   .img-history, .history-video {
     width: 40rem;
+  }
+
+  .home-icon img {
+    height: 4.5rem;
+  }
+
+  .home-icon {
+    position: absolute;
+    left: 15px;
+    top: 30px;
   }
 }
 

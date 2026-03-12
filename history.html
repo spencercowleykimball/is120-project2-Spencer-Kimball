@@ -15,10 +15,8 @@
 
 <!-- Header -->
 <header>
-
-    
-    <a class="home-icon" href="index.html">
-        <img src="s_c_icon.png" alt="Home Icon">
+    <a class="home-icon" href="index.html" id="home-icon-animation">
+        <img src="s_con.png" alt="Home Icon">
     </a>
     
     <div class="header-container">
@@ -35,35 +33,35 @@
 
 <!-- Side Bar Navigation -->
 <aside>
-    <h3>Timeline</h3>
+    <h3>Timeline Links</h3>
 
     <ul>
         <a href="history.html#SC1">
-            <li>1st Semi-annual S.C.</li>
+            <li class="nav-links">1st Semi-annual S.C.</li>
         </a>
         <a href="history.html#SC2">
-            <li>2nd Semi-annual S.C.</li>
+            <li class="nav-links">2nd Semi-annual S.C.</li>
         </a>
         <a href="history.html#SC3">
-            <li>3rd Semi-annual S.C.</li>
+            <li class="nav-links">3rd Semi-annual S.C.</li>
         </a>
         <a href="history.html#SC4">
-            <li>4th Semi-annual S.C.</li>
+            <li class="nav-links">4th Semi-annual S.C.</li>
         </a>
         <a href="history.html#SC5">
-            <li>5th Semi-annual S.C.</li>
+            <li class="nav-links">5th Semi-annual S.C.</li>
         </a>
         <a href="history.html#SC6">
-            <li>6th Semi-annual S.C.</li>
+            <li class="nav-links">6th Semi-annual S.C.</li>
         </a>
         <a href="history.html#SC7">
-            <li>7th Semi-annual S.C.</li>
+            <li class="nav-links">7th Semi-annual S.C.</li>
         </a>
         <a href="history.html#SC8">
-            <li>8th Semi-annual S.C.</li>
+            <li class="nav-links">8th Semi-annual S.C.</li>
         </a>
         <a href="history.html#SC9">
-            <li>9th Semi-annual S.C.</li>
+            <li class="nav-links">9th Semi-annual S.C.</li>
         </a>
     </ul>
     
@@ -72,8 +70,24 @@
 
 <body>
     <main>
+        <!-- Floating Button Links -->
         <a href="history.html#header">
-            <button class="floating-btn">Top</button>
+            <button class="floating-btn" id="top-btn">Top</button>
+        </a>
+        <a href="history.html#SC1">
+            <button class="floating-btn" id="sc1-btn">1</button>
+        </a>
+        <a href="history.html#SC3">
+            <button class="floating-btn" id="sc3-btn">3</button>
+        </a>
+        <a href="history.html#SC5">
+            <button class="floating-btn" id="sc5-btn">5</button>
+        </a>
+        <a href="history.html#SC7">
+            <button class="floating-btn" id="sc7-btn">7</button>
+        </a>
+        <a href="history.html#SC9">
+            <button class="floating-btn" id="sc9-btn">9</button>
         </a>
 
         <div class="history-container">
@@ -185,11 +199,18 @@
                 <ul>
                     <li> Attendance: 3 Spencers </li>
                     <li> Activity: Spencer Wedding </li>
-                    <li> Spencer Con Success Story - 1st Date was 4th Semi-annual Spencer Con </li>
                 </ul>
 
                 <div class="img-history-container">
                     <img class="img-history" src="spencercon_6_img1_hiatus.png" alt="Spencer Con 6 Wedding">
+
+                    <ul>
+                        <li>Spencer Con Success Story - 1st Date was 4th Semi-annual Spencer Con</li>
+                    </ul>
+                    
+                        <a href="history.html#SC4"><button>Success Story Reference</button></a>
+                    
+                    <img class="img-history" src="spencercon_6_img2.png" alt="Spencer Con 1st Date">
                 </div>
 
             </section>
@@ -272,6 +293,28 @@
         </div>
     </main>
 </body>
+
+<footer>
+    <div class="footer-container">
+        <h3>Contact Information</h3>
+        
+        <a target="_blank" href="https://venmo.com/u/Spencer-Kimball-20">
+            <button>
+                Donate Today to fund events!
+            </button>
+        </a>
+        
+        <a href="sms:2082066884">
+            <button>Text 2082066884</button>
+        </a>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</footer>
 
 
 
