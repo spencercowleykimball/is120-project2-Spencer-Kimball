@@ -33,4 +33,4 @@ I used animistra for my on load animations to have the cards flip in, spin the h
 I used coolors to get my palette using the lock feature to lock in the colors that I liked. 
 I also added some neumorphism to my buttons, which I like for the web version, but since you don't super see it on the mobile version I don't think it will be used that often since I bet my user groups (if they actually ever use this website) will only pull it up on their phones.
 
-Publish using GitHub pages and include the live URL in your repo about section. Submit the GitHub repo URL in LearningSuite.
+I double checked to make sure there were no accessibility errors and on wave there were no red alerts. There were some orange alerts, but nothing that really had to be changed.
